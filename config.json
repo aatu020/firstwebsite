@@ -1,0 +1,21 @@
+{
+  "params":
+  {
+    "local_server" : "True",
+    "local_uri" : "mysql://root:@localhost/thecodingthunder",
+    "prod_uri" : "mysql://root:@localhost/thecodingthunder",
+    "fb_url" : "https://www.facebook.com/thecodingthunder",
+    "tw_url" : "https://www.twitter.com/thecodingthunder",
+    "git_url" : "https://www.github.com/thecodingthunder",
+    "blog_name" : "The Coding Thunder",
+    "tag_line" : "Get | Set | Code",
+    "gmail-user" : "gmail_id@gmail.com",
+    "gmail-password" : "gmail_password",
+    "about_text" : "This is a coding blog. Here you can know all the basic of coding",
+    "no_of_posts" : 2,
+    "login_image":"login.svg",
+    "admin_user":"himanshu@xyz.com",
+    "admin_password":"shekhar",
+    "upload_location" : "C:\\Users\\himanshekhar\\PycharmProjects\\FlaskCourse\\static\\img"
+  }
+}
