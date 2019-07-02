@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+  <!-- Page Header -->
+
+  <header class="masthead" style="background-image: url('{{url_for('static',filename='img/admin.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Welcome to dashboard</h1>
+            <span class="subheading">Admin panel</span>
+          </div>
+        </div>
+      </div>
+    </div>     
+  </header>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h3>Upload a file</h3>
+        <a class="btn btn-primary" href="#" > Upload </a>
+
+        <hr>
+
+      <form action="uploader" method = "post" enctype="multipart/form-data">
+        <input type="file" name = "file1">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form> 
+
+      <hr>
+
+      <a class="btn btn-primary" href="/edit/0" > Add a new post </a>
+      <a class="btn btn-primary" href="/logout" > Logout &rarr;</a>
+
+      <hr>
+  
+        <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Sno</th>
+      <th scope="col">Title</th>
+      <th scope="col">Date</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    {% for t in post %}
+    <tr>
+      <td>{{t.sno}}</td>
+      <td>{{t.title}}</td>
+      <td>{{t.date}}</td>
+      <td><a class="btn btn-primary" href="/edit/{{t.sno}}" > Edit </a></td>
+      <td><a class="btn btn-primary" href="/delete/{{t.sno}}">Delete</a></td>
+    </tr>
+    
+    {% endfor%}
+  </tbody>
+</table>
+
+              
+   
+    
+        </div>
+      </div>
+    </div>
+ 
+{% endblock %}
